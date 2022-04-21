@@ -150,10 +150,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(154, 45);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 19);
+            this.radioButton2.Size = new System.Drawing.Size(76, 19);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.Text = "radio2";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioMarried

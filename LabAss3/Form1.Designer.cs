@@ -34,17 +34,23 @@
             this.radioMale = new System.Windows.Forms.RadioButton();
             this.radioFemale = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkReading = new System.Windows.Forms.CheckBox();
-            this.checkPainting = new System.Windows.Forms.CheckBox();
+            this.chkReading = new System.Windows.Forms.CheckBox();
+            this.chkPainting = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioUnmarried = new System.Windows.Forms.RadioButton();
             this.radioMarried = new System.Windows.Forms.RadioButton();
             this.btnPreview = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cmbCountry = new System.Windows.Forms.ComboBox();
+            this.dtgCustomer = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // txtName
@@ -105,38 +111,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gender";
             // 
-            // checkReading
+            // chkReading
             // 
-            this.checkReading.AutoSize = true;
-            this.checkReading.Location = new System.Drawing.Point(190, 303);
-            this.checkReading.Name = "checkReading";
-            this.checkReading.Size = new System.Drawing.Size(85, 19);
-            this.checkReading.TabIndex = 7;
-            this.checkReading.Text = "Reading";
-            this.checkReading.UseVisualStyleBackColor = true;
+            this.chkReading.AutoSize = true;
+            this.chkReading.Location = new System.Drawing.Point(190, 303);
+            this.chkReading.Name = "chkReading";
+            this.chkReading.Size = new System.Drawing.Size(85, 19);
+            this.chkReading.TabIndex = 7;
+            this.chkReading.Text = "Reading";
+            this.chkReading.UseVisualStyleBackColor = true;
             // 
-            // checkPainting
+            // chkPainting
             // 
-            this.checkPainting.AutoSize = true;
-            this.checkPainting.Location = new System.Drawing.Point(314, 303);
-            this.checkPainting.Name = "checkPainting";
-            this.checkPainting.Size = new System.Drawing.Size(133, 19);
-            this.checkPainting.TabIndex = 8;
-            this.checkPainting.Text = "checkPainting";
-            this.checkPainting.UseVisualStyleBackColor = true;
+            this.chkPainting.AutoSize = true;
+            this.chkPainting.Location = new System.Drawing.Point(314, 303);
+            this.chkPainting.Name = "chkPainting";
+            this.chkPainting.Size = new System.Drawing.Size(93, 19);
+            this.chkPainting.TabIndex = 8;
+            this.chkPainting.Text = "Painting";
+            this.chkPainting.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(81, 306);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 15);
+            this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
+            this.label3.Text = "Hobby";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioUnmarried);
             this.groupBox2.Controls.Add(this.radioMarried);
             this.groupBox2.Location = new System.Drawing.Point(84, 346);
             this.groupBox2.Name = "groupBox2";
@@ -145,16 +151,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Status";
             // 
-            // radioButton2
+            // radioUnmarried
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(154, 45);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 19);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioUnmarried.AutoSize = true;
+            this.radioUnmarried.Location = new System.Drawing.Point(154, 45);
+            this.radioUnmarried.Name = "radioUnmarried";
+            this.radioUnmarried.Size = new System.Drawing.Size(100, 19);
+            this.radioUnmarried.TabIndex = 1;
+            this.radioUnmarried.TabStop = true;
+            this.radioUnmarried.Text = "Unmarried";
+            this.radioUnmarried.UseVisualStyleBackColor = true;
             // 
             // radioMarried
             // 
@@ -169,7 +175,7 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(190, 465);
+            this.btnPreview.Location = new System.Drawing.Point(114, 467);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(75, 23);
             this.btnPreview.TabIndex = 11;
@@ -189,28 +195,85 @@
             this.cmbCountry.Size = new System.Drawing.Size(121, 23);
             this.cmbCountry.TabIndex = 12;
             // 
+            // dtgCustomer
+            // 
+            this.dtgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCustomer.Location = new System.Drawing.Point(498, 55);
+            this.dtgCustomer.Name = "dtgCustomer";
+            this.dtgCustomer.RowHeadersWidth = 51;
+            this.dtgCustomer.RowTemplate.Height = 27;
+            this.dtgCustomer.Size = new System.Drawing.Size(770, 313);
+            this.dtgCustomer.TabIndex = 13;
+            this.dtgCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCustomer_CellClick);
+            this.dtgCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(238, 467);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(114, 496);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Update";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(53, 503);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 15);
+            this.lblID.TabIndex = 16;
+            this.lblID.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(238, 495);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frmCustomerDateEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 527);
+            this.ClientSize = new System.Drawing.Size(1394, 527);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dtgCustomer);
             this.Controls.Add(this.cmbCountry);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkPainting);
-            this.Controls.Add(this.checkReading);
+            this.Controls.Add(this.chkPainting);
+            this.Controls.Add(this.chkReading);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtName);
             this.Name = "frmCustomerDateEntry";
             this.Text = "frmCustomerDateEntry";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.From1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,15 +287,20 @@
         private System.Windows.Forms.RadioButton radioMale;
         private System.Windows.Forms.RadioButton radioFemale;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkReading;
-        private System.Windows.Forms.CheckBox checkPainting;
+        private System.Windows.Forms.CheckBox chkReading;
+        private System.Windows.Forms.CheckBox chkPainting;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioUnmarried;
         private System.Windows.Forms.RadioButton radioMarried;
         private System.Windows.Forms.Button btnPreview;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox cmbCountry;
+        private System.Windows.Forms.DataGridView dtgCustomer;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button button3;
     }
 }
 

@@ -60,7 +60,7 @@ private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
 
-            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Integrated Security=True;Pooling=False";
+            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False;Password=zsc132412;";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
 
@@ -97,7 +97,7 @@ private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
             if (radioMarried.Checked) Status = "1";
             else Status = "0";
 
-            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Integrated Security=True;Pooling=False";
+            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False;Password=zsc132412;";
             SqlConnection objConnection  = new SqlConnection(strConnection);
             objConnection.Open();
 
@@ -121,16 +121,18 @@ private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         }
         private  void displayCustomer(string id)
         {
-            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Integrated Security=True;Pooling=False";
+            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False;Password=zsc132412;";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
 
-            string strCommand = "Select * from Customer where id =" + id;
+            string strCommand = "Select * from Customer  where id = " + id;
             SqlCommand objCommand = new SqlCommand(strCommand, objConnection);
 
             DataSet objDataset = new DataSet();
             SqlDataAdapter objAdapter = new SqlDataAdapter(objCommand);
-            objAdapter.Fill(objDataset);     
+            objAdapter.Fill(objDataset);
+              
+
             objConnection.Close();
             lblID.Text = objDataset.Tables[0].Rows[0][0].ToString().Trim();
             txtName.Text = objDataset.Tables[0].Rows[0][1].ToString().Trim();
@@ -156,7 +158,7 @@ private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
             if (radioMarried.Checked) Status = "1";
             else Status = "0";
 
-            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Integrated Security=True;Pooling=False";
+            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False;Password=zsc132412;";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
 
@@ -181,7 +183,7 @@ private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Integrated Security=True;Pooling=False";
+            string strConnection = "Data Source=LAPTOP-BMNIF6V9;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False;Password=zsc132412;";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
 
